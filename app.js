@@ -7,7 +7,6 @@ function calcular() {
     qtdDesejada = Number(document.getElementById("qtd").value);
     pcAtual = Number(document.getElementById("pcAtual").value);
   
-    // If x is Not a Number or less than one or greater than 10
     if (isNaN(qtdAtual) || isNaN(pcMedioAtual) || isNaN(qtdDesejada) || isNaN(pcAtual)) {
       text = "Todos os campos são obrigatórios";
     } else {
@@ -22,3 +21,13 @@ function calcular() {
       document.getElementById("resultado").innerHTML = precoMedioFinal.toFixed(2);
     }
 }
+
+$(document).ready(function () {
+    $("#pcMedioAtual").on("keyup", null, function () {
+        var $input = $(this),
+            value = $input.val(),
+            num = parseFloat(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+
+        $input.siblings('.add-on').text('$' + num);
+    });
+});
