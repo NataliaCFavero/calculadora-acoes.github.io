@@ -36,7 +36,22 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center mt-3 mb-3">
+
+                <div class="col-sm-1 form-check">
+                    <input class="form-check-input" type="radio" name="valorQtde" id="valorCheck" value="valor" checked onclick="optionsCheck()">
+                    <label class="form-check-label" for="valorQtde">
+                        Por valor
+                    </label>
+                </div>
+                <div class="col-sm-2 form-check">
+                    <input class="form-check-input" type="radio" name="valorQtde" id="qtdCheck" value="qtd" onclick="optionsCheck()">
+                    <label class="form-check-label" for="valorQtde">
+                        Por quantidade
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center d-none" id="porQuantidade">
                 <div class="col-sm-3">
                     <label for="qtd" class="form-label">Quantidade desejada</label>
                     <input type="number" class="form-control" id="qtd">
@@ -45,7 +60,40 @@
                     <label for="pcAtual" class="form-label">Preço atual</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text">R$</span>
-                        <input type="number" class="form-control" aria-label="Valor em reais" placeholder="000,00" id="pcAtual" >
+                        <input type="number" class="form-control" aria-label="Valor em reais" placeholder="000,00" id="pcAtualQtd" >
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="pcAtual" class="form-label">Valor total</label>
+                    <div class="input-group">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">R$</span>
+                            <span class="input-group-text form-control" id="valorResultado">0.000,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center" id="porValor">
+                <div class="col-sm-3">
+                    <label for="valorTotal" class="form-label">Valor a investir</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">R$</span>
+                        <input type="number" class="form-control" aria-label="Valor em reais" placeholder="000,00" id="valorTotal" >
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="pcAtual" class="form-label">Preço atual</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">R$</span>
+                        <input type="number" class="form-control" aria-label="Valor em reais" placeholder="000,00" id="pcAtualValor" >
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="pcAtual" class="form-label">Quantidade ações</label>
+                    <div class="input-group">
+                        <div class="input-group mb-3">
+                            <span class="form-control input-group-text" id="qtdResultado">0</span>
+                        </div>
                     </div>
                 </div>
             </div>
