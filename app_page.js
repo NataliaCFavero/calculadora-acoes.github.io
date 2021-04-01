@@ -28,7 +28,7 @@ function calcular() {
       var precoMedioFinal = valorTotal/qtdeTotal;
 
       if (porValorIsCheck) {
-        setValue("qtdResultado", qtdDesejada.toFixed(0));
+        setValue("qtdResultado", qtdDesejada.toFixed(3));
       } else {
         setValue("valorResultado", totalFuturo.toFixed(2));
       }
