@@ -44,7 +44,7 @@ function optionsCheck() {
     document.getElementById('porValor').classList.add('d-none');
     document.getElementById('porQuantidade').classList.remove('d-none');
   }
-  setResultadoFinal(0);
+  setResultadoFinal(parseFloat("000"));
 }
 
 function calcularQtde(valorTotal, valorUnitario) {
